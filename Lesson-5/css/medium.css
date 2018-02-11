@@ -1,0 +1,74 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+  font-size: 16px;
+    font-family: serif;
+  /* Declare the base font-family - from google font api or other */
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header {}
+header h1 {}
+header img {}
+header .subheading {}
+
+
+main {}
+main h2 {}
+main figure { margin: 0 0 .2rem 2%; width:96%; }
+main figure img { width: 100%; }
+
+section {}
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+  width: ???; /* fill the page in the small/phone view */
+  margin: ???;
+}
+
+footer {}
+footer aside {}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+
+@media only screen and (min-width: 37.5em) {
+    
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: px;
+}
+nav ul li {
+     display: block;
+    width: 1000px;
+    background-color: aliceblue;
+    display: inline;
+    float: left;
+}
+nav ul li a {
+    display: block;
+}
+nav ul li.active a {
+    color: white;
+    background-color: cornflowerblue;
+}
+nav ul li a:hover {
+     background-color: cornflowerblue;
+    color: white;
+}
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+  
+  nav button { display:none; }  /* hamburger button does not need to be shown */
+  
+        
+  section.forecast { display: ; }  /* show the 10-day forecast with the medium view and up */
+  
+  article p.town-article img { width: 62.666%; float:right; }  /* responsive images */
+
+}
