@@ -1,0 +1,40 @@
+#ACME tr:nth-child(even) { background: #e7f0ed}
+#ACME tr:nth-child(odd) { background: #e7ffed}
+
+#ACME {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Ubuntu, sans-serif;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 20px rgba(66,128,138,.9);
+}
+
+#ACME td {
+    padding: 8px;
+    border: lightgray 1px solid;
+}
+
+#title {
+    border: lightgray 1px solid;
+    padding: 10px;
+    background-color: #7fb9c2;
+    font-size: 28px;
+    color: black;
+}
+
+.COL {
+    background-color: #628ca6;
+    color: white;
+    font-weight: 600;
+}
+
+#goalmet {
+    background-color: #628ca6;
+    color: white;
+}
+
+#Foot {
+    background-color: #7fb9c2;
+    font-size: 14px;
+}
