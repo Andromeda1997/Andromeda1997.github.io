@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather Today</title>
+	<meta name="author" content="Raylee S. Haws">
+	<meta name="description" content="Local Weather Page">
+
+	<!-- external style references in the proper cascading order --> 
+	<link href="https://fonts.googleapis.com/css?family=#" rel="stylesheet"> <!-- Google API font reference -->
+	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+	<link href="css/small.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+	<link href="css/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+	<link href="css/large.css" rel="stylesheet"> <!-- large/wide/desktop views --> 
+</head>
+    
+<body>
+	<header>
+		<table>
+			<tr>
+				<td><img src="images/sun.png" alt="Sun Image"></td>
+				<td>
+				<p id="headerText">Weather Today</p>
+				<p id="subHeaderText">Accurate Weather Rain or Shine</p>
+				</td>
+			</tr>
+		</table>
+
+	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" class="active">Home</a>
+		<a href="franklin.html">Franklin</a>
+		<a href="#greenville">Greenville</a>
+		<a href="#springville">Springville</a>
+		<a href="stormcenter.html">StormCenter</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">&#9776;</a> <!-- &#9776 = hamburger symbol -->
+	</div> 
+		
+	<picture id="topimage">
+		<source media="(min-width: 600px)" srcset="images/franklin_large.jpg">
+		<source media="(min-width: 465px)" srcset="images/franklin_medium.jpg">
+		<img src="images/franklin_small.jpg" alt="Flowers" style="width:auto;">
+	</picture>
+		
+	<main>
+		
+		<table id="currentCond">
+			<tbody>
+				<tr>
+					<th colspan="2">The City of Franklin</th> <!--span over all columns -->
+				</tr>
+				<tr>
+					<td><strong>Weather Summary</strong></td>
+					<td id="summary"> Sunny</TD>
+				</tr>
+				<tr>
+					<td><strong>High</strong></td>
+					<td id="high">90°F</td>
+				</tr>
+				<tr>
+					<td><strong>Low</strong></td>
+					<td id="low">66°F</td>
+				</tr>
+				<tr>
+					<td><strong>Precipitation</strong></td>
+					<td id="precipitation">0%</td>
+				</tr>
+				<tr>
+					<td><strong>Wind Speed</strong></td>
+					<td id="wind">5 mph SW</td>
+				</tr>
+                <tr>
+					<td><strong>Wind Chill</strong></td>
+					<td id="windchill">Wind Chill Placeholder</td>
+				</tr>
+			</tbody>
+		</table>
+		
+        
+		<section class="forecast">
+			<table id="days">
+				<tbody>
+					<tr>
+					<th colspan="10">10 Day Forecast</th> <!--span over all columns -->
+					</tr>
+					<tr>
+						<th>Day 1</th>
+						<th>Day 2</th>
+						<th>Day 3</th>
+						<th>Day 4</th>
+						<th>Day 5</th>
+						<th>Day 6</th>
+						<th>Day 7</th>
+						<th>Day 8</th>
+						<th>Day 9</th>
+						<th>Day 10</th>
+					</tr>
+					<tr>
+						<td>89&deg;F</td>
+						<td>87&deg;F</td>
+						<td>78&deg;F</td>
+						<td>75&deg;F</td>
+						<td>72&deg;F</td>
+						<td>72&deg;F</td>
+						<td>79&deg;F</td>
+						<td>83&deg;F</td>
+						<td>85&deg;F</td>
+						<td>89&deg;F</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+      
+		<article class="news">
+			<h3>Franklin Breaks Record</h3>
+			
+			<figure id="articleimage">
+				<img src="images/raindrops.jpg" alt="Rain Image">
+			</figure>	
+			<p id="town-article">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in diam vitae elit finibus eleifend ut semper ligula.
+				Aenean sit amet tellus at elit lobortis mollis eu nec odio. Fusce vulputate et justo id facilisis.
+				Nunc consequat gravida sodales. Ut auctor imperdiet dignissim. Etiam venenatis dui vitae massa malesuada aliquam.
+				Maecenas viverra est in vestibulum fringilla. Suspendisse in enim quis dolor finibus pretium at id lacus.
+				Sed sollicitudin tellus vitae ex porta, rhoncus sollicitudin tortor semper.
+				Praesent rutrum arcu id ante convallis, eu condimentum nunc pretium. Vivamus id euismod lacus, tempor tincidunt elit.
+				Quisque venenatis congue nulla, sed tincidunt nisi congue eget. Vestibulum faucibus velit ac ipsum finibus aliquam.
+				Sed diam ipsum, commodo in tortor sit amet, ullamcorper accumsan dui. Sed enim dui, mollis eu tellus eu, rhoncus mollis massa.
+				Proin lectus magna, dapibus sit amet dolor sit amet, molestie feugiat diam.
+			</p>
+		</article>	
+		
+  	</main>
+    
+	<footer>
+		<aside>
+			Weather Today <br>
+			123 Main St. <br>
+			Franklin, MU 83454 <br>
+			(999)999-9999 <br>
+			contact@theurl.com
+        </aside>
+      
+		<p class="footer-bar">&copy;2017 All Rights Reserved | Weather Today | <span id="currentdate">Current Date Placeholder</span></p>
+   	</footer>
+
+	<script src="scripts/hamburger.js"></script>
+	<script src="scripts/currentdate.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>

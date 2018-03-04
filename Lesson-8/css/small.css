@@ -1,0 +1,285 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-size: 16px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+header {
+	background: #b3d9ff;
+	padding-top: 1%;
+}
+
+main {
+	text-align: center;
+	margin-left: 10px; 
+    margin-right: 10px;
+}
+
+#headerText {
+	font-size: 2em;
+}
+
+#subHeaderText {
+	font-size: 0.9em;
+	margin-top: -32px;
+}
+
+/*-------------SUMMARY TABLE---------------------*/
+#currentCond {
+	font-size: 1em;
+	text-align: center;
+	margin-left:auto; 
+    margin-right:auto;
+	padding: 20px;
+}
+
+#currentCond th {
+	font-size: 1.5em;
+	border-collapse: collapse;
+}
+#summary {
+	color: #ff9933; font-weight: 600;
+}
+#high {
+	color: #ff0000; font-weight: 600;
+}
+#low {
+	color: #0066ff; font-weight: 600;
+}
+#precipitation {
+	color: #66ccff; font-weight: 600;
+}
+#wind {
+	color: #66ccff; font-weight: 600;
+}
+#windchill {
+	color: #0033cc; font-weight: 600;
+}
+
+/*----------------FORECAST TABLE---------------------*/
+#days {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#days {  /* temperatures */
+	margin-left: auto; 
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+#days td, #days th {
+    border: 1px solid #ddd;
+    padding: 6px;
+	text-align: center;
+}
+
+#days th { /* day1, day2, ... */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+}
+
+/*-------------------NEWS ARTICLE---------------------*/
+article p.town-article {
+	padding: 10px;
+	max-width: 960px;
+	text-align: justify;
+}
+
+/*------------NAVIGATION BAR (FOLLOWED W3SCHOOLS TUTORIAL)---------------------*/
+
+/* Add background color navbar */
+.topnav {
+    width: auto;
+    margin: auto;
+    background-color: #0066cc;
+    display: flex;
+  }
+
+/* Style the links inside navbar */
+.topnav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of the links on hover */
+.topnav a:hover {
+    background-color: #b3d9ff;
+    color: black;
+}
+
+/*Hide the hamburger on medium and large screens (anything over 600px) */
+.topnav .icon {
+    display: none;
+}
+
+/* When screen is < 600px wide, hide all links except for the first one ("Home"). Show the hamburger link (.icon) */
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {
+        display: none;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+	
+	.topnav a.icon {
+		display: flex;
+    }
+    
+    .topnav a.icon:hover {
+		background-color: #0066cc;
+        color: white;
+    }
+    	
+	.box {
+		transition: box-shadow .3s;
+		width: auto;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+}
+
+/* Display links vertically instead of horizontally when less-than 600px wide*/
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+/*-------------------------END NAVIGATION BAR----------------------------------*/
+
+section.forecast { display: none; }  /* hide 10-day forecast on small screens */
+
+#town-article {
+	margin: 10px;
+	text-align: justify;
+	padding-bottom: 10px;
+}
+
+#articleimage img {
+	width:262px;
+	height:175px;
+	margin-left:15px;
+	float: right;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+article.news {
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+article p.town-article img {
+	width: 62.666%;
+	float:right;
+}
+
+/*------------------GALLERY GRID---------------------*/
+
+@media screen and (max-width: 600px) {
+    
+    .grid { 
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+    .grid img {
+        max-width: 100%;
+        padding: 5px;
+    }
+}
+
+/*-----------FOOTER---------------*/
+footer {
+	background: #b3d9ff;
+	text-align: center;
+	padding-top: 10px;
+}
+
+footer>p {
+	background: #0066cc;
+	text-align: center;
+	color: #ffffff;
+	font-size: 13px;
+} 
+
+/*-------------------STORM REPORT FORM--------------------*/
+form div {
+	font-weight: 500;
+	margin-top: 20px;
+	text-align: left;
+}
+
+form legend {
+	color: #0066cc;
+	font-size: 25px;
+}
+
+form fieldset {
+	margin: 15px 18px;
+	border: 2px solid #0066cc;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #d1e5f9;
+	text-align: left;
+	border-radius:30px 0 30px 0
+}
+
+form span {
+	font-size: 1rem;
+	display: block;
+}
+
+input:focus {
+	box-shadow: 1px 1px 4px rgba(0, 0, 0,.5);
+}
+
+label input:required{
+	padding: .3em .3em .3em 2em;
+	background-image: url(../images/icon_validate.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+label input:valid {
+	background-position: 5px -30px;
+}
+
+
+form .button {
+	padding: 0.5em 3em;
+	border-radius: 14px;
+	border: 1px currentColor;
+	border-image: none;
+	color: white;
+	font-size: 16px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 20px;
+	background-color: #0066cc;
+}

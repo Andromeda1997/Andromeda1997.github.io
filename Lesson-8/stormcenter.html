@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather Today</title>
+	<meta name="author" content="Raylee S. Haws">
+	<meta name="description" content="Local Weather Page">
+
+	<!-- external style references in the proper cascading order --> 
+	<link href="https://fonts.googleapis.com/css?family=#" rel="stylesheet"> <!-- Google API font reference -->
+	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+	<link href="css/small.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+	<link href="css/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+	<link href="css/large.css" rel="stylesheet"> <!-- large/wide/desktop views --> 
+</head>
+    
+<body>
+	<header>
+		<table>
+			<tr>
+				<td><img src="images/sun.png" alt="Sun Image"></td>
+				<td>
+				<p id="headerText">Weather Today</p>
+				<p id="subHeaderText">Accurate Weather Rain or Shine</p>
+				</td>
+			</tr>
+		</table>
+
+	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" class="active">Home</a>
+		<a href="franklin.html">Franklin</a>
+		<a href="#greenville">Greenville</a>
+		<a href="#springville">Springville</a>
+		<a href="stormcenter.html">StormCenter</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">&#9776;</a> <!-- &#9776 = hamburger symbol -->
+	</div> 
+		
+	<main>
+		
+		<h2>Report Your Weather:</h2>
+		<p>Let us know what's going on in your neck of the woods!</p>
+		
+		<!----------------------- FORM --------------------------> 
+		<form name="stormcenter" action="thanks.html" enctype="multipart/form-data" method="post">
+
+			<fieldset>
+				<legend>Personal Information</legend>      
+				<div><label id="name"><span>First and Last Name:</span><input type="text" name="fullname" title="Minimum of 5 characters" autofocus required pattern="[A-Za-z -]{5,}" value=""></label></div>
+				<div><label id="email"><span>Email:</span><input type="email" name="email" title="Enter a valid email address" placeholder="name@domain.com" required value=""></label></div>
+				<div><label id="phone"><span>Phone:</span><input type="tel" name="phone" title="Enter a valid phone number" required placeholder="555-123-1234" pattern="\d{3}[\-]\d{3}[\-]\d{4}" value=""></label></div> <!-- I found the pattern for phone # from html5pattern.com -->
+				<div><label id="zip"><span>Zip Code:</span><input type="number" name="zipcode" title="Enter your 5 digit Zip Code" required></label></div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Storm Information</legend>     
+				<div><label><span>Storm Date:</span><input name="stormdate" type="date"></label></div>
+				<div><label><span>Storm Type:</span><input name="stormtype" type="text" list="stormtype">
+				<datalist id="stormtype">
+					<option value="Thunderstorm"></option>         
+					<option value="Hail"></option>
+					<option value="High Winds"></option>       
+					<option value="Heavy Rain"></option>
+					<option value="Tornado"></option>
+					<option value="Snow"></option>
+					<option value="Flash Flood"></option>
+					<option value="Hurricane"></option>
+				</datalist></label></div>
+
+				<div><label for="rating"><span>Storm Severity (1-10):</span>
+				<input id="rating" onchange="adjustRating(this.value)" oninput="adjustRating(this.value)" type="range" min="1" max="10" step="1" value="1">
+				<span id="value">1</span></label></div>
+
+				<div><label><span>Storm Region:</span>
+				<select name="stormregion">
+					<option disabled selected>Select Region</option>
+					<option	value="franklin">Franklin</option>
+					<option value="greenville">Greenville</option>
+					<option value="springfield">Springfield</option>
+				</select></label></div>
+
+                <div><span>Are you in danger?</span></div>
+				<div><label><input name="danger" type="radio" value="yes">Yes</label></div>
+				<div><label><input name="danger" type="radio" value="no">No</label></div>
+				<div><label><input name="danger" type="radio" value="maybe">Maybe</label></div>
+
+				<div><label id="comment"><span>Additional Information or Comments:</span><textarea rows="6" cols="30"></textarea></label></div>
+			</fieldset>
+
+			<input class="button" type="submit" value="Submit">
+			<button class="button" type="reset" value="Reset">Clear Form</button>
+
+		</form>
+			
+  	</main>
+    
+	<footer>
+		<aside>
+			Weather Today <br>
+			123 Main St. <br>
+			Franklin, MU 83454 <br>
+			(999)999-9999 <br>
+			contact@theurl.com
+        </aside>
+      
+		<p class="footer-bar">&copy;2017 All Rights Reserved | Weather Today | <span id="currentdate">Current Date Placeholder</span></p>
+   	</footer>
+
+	<script src="scripts/hamburger.js"></script>
+	<script src="scripts/currentdate.js"></script>
+	<script src="scripts/rangeslider.js"></script>
+</body>
+</html>
