@@ -1,6 +1,6 @@
 	// Get current conditions with first request:
 	var weatherObject = new XMLHttpRequest();
-	weatherObject.open('GET','http://api.wunderground.com/api/89f8b8af653f3faa/conditions/q/MN/Franklin.json', true);
+	weatherObject.open('GET','//api.wunderground.com/api/89f8b8af653f3faa/conditions/q/MN/Franklin.json', true);
 	weatherObject.send();
 	weatherObject.onload = function() {
 		var weatherInfo = JSON.parse(weatherObject.responseText);
@@ -17,7 +17,7 @@
 	
 	// Get forecast info with second request:
 	var weatherObject2 = new XMLHttpRequest();
-	weatherObject2.open('GET','http://api.wunderground.com/api/89f8b8af653f3faa/forecast/q/MN/Franklin.json', true);
+	weatherObject2.open('GET','//api.wunderground.com/api/89f8b8af653f3faa/forecast/q/MN/Franklin.json', true);
 	weatherObject2.send();
 	weatherObject2.onload = function() {
 		var franklinWeather = JSON.parse(weatherObject2.responseText);
