@@ -1,0 +1,30 @@
+@media only screen and (min-width: 64em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here. 64em = 1024px */
+  
+    .grid { 
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+    .grid img {
+        max-width: 100%;
+        padding: 5px
+    }
+	
+	/*----------GALLERY DROP SHADOW------------*/
+
+	.box {
+		transition: box-shadow .3s;
+		width: 100%;
+		height: auto;
+		margin-bottom: 25px;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+	.box:hover {
+		box-shadow: 0 0 20px rgba(0,0,0,.5); 
+	}
+}

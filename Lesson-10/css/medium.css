@@ -1,0 +1,25 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here 37.5em = 600px */
+  
+  section.forecast { display: block; }  /* show the 10-day forecast with the medium view and up */
+  
+    .grid { 
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+    .grid img {
+        max-width: 100%;
+        padding: 5px
+    }
+	
+	.box {
+		transition: box-shadow .3s;
+		width: auto;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+}
