@@ -1,5 +1,5 @@
 var section = document.querySelector('div.myList');
-var requestURL = 'https://api.myjson.com/bins/gz6xb';  //path to json file
+var requestURL = 'https://andromeda1997.github.io/Final/data/services.json';  //path to json file
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
