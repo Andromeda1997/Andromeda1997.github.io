@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Mountain Spoke</title>
+	<meta name="author" content="Raylee S. Haws">
+	<meta name="description" content="Mountain Bike Sales & Service">
+
+	<!-- external style references in the proper cascading order --> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!-- Google API font reference -->
+	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+	<link href="css/small.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+	<link href="css/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+	<link href="css/large.css" rel="stylesheet"> <!-- large/wide/desktop views --> 
+</head>
+    
+<body>
+	<header>
+		<table>
+			<tr>
+				<td><img src="images/Bike%20Logo.png" alt="Logo"></td>
+				<td>
+				<p id="headerText">The Mountain Spoke</p>
+				<p id="subHeaderText">Meeting all your Bicycle Needs</p>
+				</td>
+			</tr>
+		</table>
+
+	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="index.html">Home</a>
+		<a href="AdventureTours.html">Adventure Tours</a>
+		<a href="Events.html">Events</a>
+		<a href="Sales.html">Sales</a>
+		<a href="Services.html">Services</a>
+		<a href="Contact.html" class="active">Contact</a>
+		<a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">&#9776;</a> <!-- &#9776 = hamburger symbol -->
+	</div> 
+		
+	<picture id="topimage">
+		<source media="(min-width: 768px)" srcset="images/1495718780-gettyimages-558948537.jpg">
+		<source media="(min-width: 480px)" srcset="images/1495718780-gettyimages-558948537.jpg">
+		<img src="images/1495718780-gettyimages-558948537.jpg" alt="image" style="max-width:100%;height:auto">
+	</picture>
+		
+	<main>
+			
+		<!-- Embedded Google Map -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.931441040582!2d-111.09291154913325!3d45.67227662745395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2s3950+Valley+Commons+Dr%2C+Bozeman%2C+MT+59718!5e0!3m2!1sen!2sus!4v1523631243870" width="600" height="450" allowfullscreen></iframe>
+			
+		
+		<!-- FORM --> 
+		<form name="contact" action="thanks.html" enctype="multipart/form-data" method="post">
+
+			<fieldset>
+				<legend>CONTACT US</legend>      
+				<div><label id="name"><span>First and Last Name:</span><input type="text" name="fullname" title="Minimum of 5 characters" required pattern="[A-Za-z -]{5,}" value=""></label></div>
+				<div><label id="email"><span>Email:</span><input type="email" name="email" title="Enter a valid email address" placeholder="name@domain.com" required value=""></label></div>
+				<div><label id="phone"><span>Phone:</span><input type="tel" name="phone" title="Enter a valid phone number" required placeholder="555-123-1234" pattern="\d{3}[\-]\d{3}[\-]\d{4}" value=""></label></div> <!-- I found the pattern for phone # from html5pattern.com -->
+				<div><label id="zip"><span>Zip Code:</span><input type="number" name="zipcode" title="Enter your 5 digit Zip Code" required></label></div>
+			
+				<div><label id="comment"><span>Additional Information or Comments:</span><textarea rows="6" cols="30"></textarea></label></div>
+			</fieldset>
+			
+			<input class="button" type="submit" value="Submit">
+			<button class="button" type="reset" value="Reset">Clear Form</button>
+
+		</form>
+			
+  	</main>
+    
+	<footer>
+		<aside>
+			The Mountain Spoke <br>
+			3950 Valley Commons Drive. <br>
+			Bozeman, MT 59718 <br>
+			(999)999-9999 <br>
+			contact@theurl.com <br> 
+            <a href="ResourcePage.html">Resource Page</a>
+            <a href="myVideo.html">My Video Overview</a>
+        </aside>
+      
+		<p class="footer-bar">&copy;2018 All Rights Reserved | The Mountain Spoke | <span id="currentdate">Current Date Placeholder</span></p>
+   	</footer>
+    
+	<script src="scripts/hamburger.js"></script>
+	<script src="scripts/currentdate.js"></script>
+    
+</body>
+</html>

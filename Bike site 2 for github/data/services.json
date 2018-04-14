@@ -1,0 +1,26 @@
+{
+  "services" : [
+  {
+    "name": "Basic Tune-Up",
+    "cost": "$39.99",
+    "time":	"1 Hour"
+  },
+  {
+    "name": "Premium Tune-Up",
+    "cost": "$69.99",
+    "time":	"3 Hours"
+  },
+
+  {
+    "name": "Brake System Tune-Up",
+    "cost": "$24.99",
+    "time":	"1 Hour"
+  },
+
+  {
+    "name": "Drivetrain Tune-Up",
+    "cost": "$24.99",
+    "time":	"1 Hour"
+  }
+ ]
+}

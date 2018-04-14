@@ -1,0 +1,328 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-size: 16px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+	text-align: center;
+    background-color: black;
+    background-image: url("../images/bg.jpg");
+}
+
+header {
+	background: black;
+	padding-top: 1%;
+}
+
+main {
+	font-size: 1em;
+	font-weight: 600;
+	text-align: center;
+	margin-left:auto; 
+    margin-right:auto;
+	padding: 20px;
+}
+	
+.myList {
+	display: inline-block;
+	padding: 50px;
+}
+
+article {
+	display: inline-block;
+	border: 2px solid dimgrey;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	background-color: lightgrey;
+	text-align: center;
+	border-radius:30px 30px 30px 30px;
+}
+
+#headerText {
+	font-size: 2em;
+    color: white;
+}
+
+#subHeaderText {
+	font-size: 0.9em;
+	margin-top: -32px;
+    color: white;
+}
+
+/*----------------SALE TABLE---------------------*/
+table.saleTable {
+  border: 2px solid #000000;
+  background-color: #4A4A4A;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.saleTable td, table.saleTable th {
+  border: 2px solid #000000;
+  padding: 3px 2px;
+}
+
+table.saleTable tbody td {
+  font-size: 13px;
+  color: #E6E6E6;
+}
+
+table.saleTable thead {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+
+table.saleTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #000000;
+}
+
+table.saleTable img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	overflow: auto;
+}
+
+/*----------------HOME TABLE---------------------*/
+table.homeTable {
+  background-color: lightgray;
+  width: auto;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.homeTable td {
+	width: 50%;
+	padding: 15px 15px;
+}
+
+table.homeTable tbody td {
+  font-size: 16px;
+  color: #000000;
+}
+
+table.homeTable img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	overflow: auto;
+}
+
+/*-------------------SERVICES PRICE LIST---------------------*/
+#myList {
+	display: inline-block;
+	margin: 15px 18px;
+	border: 2px solid #0066cc;
+	padding: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #d1e5f9;
+	text-align: left;
+	border-radius:30px 30px 30px 30px;
+}
+
+/*------------NAVIGATION BAR (FOLLOWED W3SCHOOLS TUTORIAL)---------------------*/
+
+/* Add background color navbar */
+.topnav {
+    width: auto;
+    margin: auto;
+    background-color: darkgrey;
+    display: flex;
+	position: sticky;
+    top: 0;
+  }
+  
+/* Color the active tab */
+.topnav a.active{
+background: limegreen;
+}
+
+/* Style the links inside navbar */
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of the links on hover */
+.topnav a:hover {
+    background-color: dimgray;
+    color: white;
+}
+
+/*Hide the hamburger on medium and large screens (anything over 600px) */
+.topnav .icon {
+    display: none;
+}
+
+/* When screen is < 600px wide, hide all links except for the first one ("Home"). Show the hamburger link (.icon) */
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {
+        display: none;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+	
+	.topnav a.icon {
+		display: flex;
+    }
+    
+    .topnav a.icon:hover {
+		background-color: dimgrey;
+        color: white;
+    }
+    	
+	.box {
+		transition: box-shadow .3s;
+		width: auto;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+}
+
+/* Display links vertically instead of horizontally when less-than 600px wide*/
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+/*-------------------------END NAVIGATION BAR----------------------------------*/
+
+#resources-article {
+	margin: 10px;
+	text-align: justify;
+	padding-bottom: 10px;
+}
+
+.articleimage img {
+	max-width:50%;
+	max-height:50%;
+	margin-left:15px;
+	float: right;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+#topimage img {
+	max-width:75%;
+	max-height:75%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+article.news {
+	margin: 40px 40px;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+article p.town-article img {
+	width: 62.666%;
+	float:right;
+}
+
+/*-----------FOOTER---------------*/
+footer {
+	background: dimgrey;
+	text-align: center;
+	padding-top: 10px;
+}
+
+footer>p {
+	background: darkgrey;
+	text-align: center;
+	color: #ffffff;
+	font-size: 13px;
+} 
+
+/*-------------------FORMS--------------------*/
+form div {
+	font-weight: 500;
+	margin-top: 20px;
+	text-align: left;
+}
+
+form legend {
+	color: #ffffff;
+	text-shadow: 3px 2px darkgray;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+form fieldset {
+	border: 4px solid darkgray;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	background-color: lightgrey;
+	margin: 15px 18px;
+	text-align: left;
+	border-radius:10px 10px 10px 10px
+}
+
+form span {
+	font-size: 1rem;
+	display: block;
+}
+
+input:focus {
+	box-shadow: 1px 1px 4px rgba(0, 0, 0,.5);
+}
+
+label input:required{
+	padding: .3em .3em .3em 2em;
+	background-image: url(../images/icon_validate.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+label input:valid {
+	background-position: 5px -30px;
+}
+
+form .button {
+	padding: 0.5em 3em;
+	border-radius: 14px;
+	border: 1px currentColor;
+	border-image: none;
+	color: black;
+	font-size: 16px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 20px;
+	background-color: lightgrey;
+}

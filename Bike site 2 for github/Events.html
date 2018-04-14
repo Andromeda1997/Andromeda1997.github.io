@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Mountain Spoke</title>
+	<meta name="author" content="Raylee S. Haws">
+	<meta name="description" content="Mountain Bike Sales & Service">
+
+	<!-- external style references in the proper cascading order --> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!-- Google API font reference -->
+	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+	<link href="css/small.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+	<link href="css/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+	<link href="css/large.css" rel="stylesheet"> <!-- large/wide/desktop views --> 
+</head>
+    
+<body>
+	<header>
+		<table>
+			<tr>
+				<td><img src="images/Bike%20Logo.png" alt="Logo"></td>
+				<td>
+				<p id="headerText">The Mountain Spoke</p>
+				<p id="subHeaderText">Meeting all your Bicycle Needs</p>
+				</td>
+			</tr>
+		</table>
+
+	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="index.html">Home</a>
+		<a href="AdventureTours.html">Adventure Tours</a>
+		<a href="Events.html" class="active">Events</a>
+		<a href="Sales.html">Sales</a>
+		<a href="Services.html">Services</a>
+		<a href="Contact.html">Contact</a>
+		<a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">&#9776;</a> <!-- &#9776 = hamburger symbol -->
+	</div> 
+		
+	<picture id="topimage">
+		<source media="(min-width: 768px)" srcset="images/jonathajunge-163_0880.jpg">
+		<source media="(min-width: 480px)" srcset="images/jonathajunge-163_0880.jpg">
+		<img src="images/jonathajunge-163_0880.jpg" alt="image" style="max-width:100%;height:auto">
+	</picture>
+		
+	<main>
+				
+		<article class="news">
+			<h3>Cycle the Continental Divide</h3>
+			
+			<figure class="articleimage">
+				<img src="images/dscn0637.jpg" alt="Continental Divide">
+			</figure>	
+			<p id="town-article">
+				Have a desire to test your cycling mettle?  Try biking “Cycle the Continental Divide” or more commonly know now as the “Tour Divide” race.  It begins June 7, 2018 in Banff, Alberta Canada and takes 40 days to traverse mountain forests, valleys, grasslands and deserts, ending in Antelope Wells, New Mexico.  This trail consists of 2,754 miles of mud, sand, snow and just about any type of environment you can imagine!  It will definitely test your abilities and is not for the faint at heart or beginning cyclist.  There is no entry fee or early registration required.
+			</p>
+		</article>	
+		
+		<!-- FORM --> 
+		<form name="events" action="thanks.html" enctype="multipart/form-data" method="post">
+
+			<fieldset>
+				<legend>Registration Form</legend>      
+				<div><label id="name"><span>First and Last Name:</span><input type="text" name="fullname" title="Minimum of 5 characters" required pattern="[A-Za-z -]{5,}" value=""></label></div>
+				<div><label id="email"><span>Email:</span><input type="email" name="email" title="Enter a valid email address" placeholder="name@domain.com" required value=""></label></div>
+				<div><label id="phone"><span>Phone:</span><input type="tel" name="phone" title="Enter a valid phone number" required placeholder="555-123-1234" pattern="\d{3}[\-]\d{3}[\-]\d{4}" value=""></label></div> <!-- I found the pattern for phone # from html5pattern.com -->
+				<div><label id="birth"><span>Birth Date:</span><input type="date" name="birthday" required></label></div>
+				<div><label id="state"><span>State or Country:</span><input type="text" name="stateco" title="Enter your state or country" required value=""></label></div>
+							
+				<div><label id="comment"><span>Special Accomodations / Comments:</span><textarea rows="6" cols="30"></textarea></label></div>
+			</fieldset>
+			
+			<input class="button" type="submit" value="Submit">
+			<button class="button" type="reset" value="Reset">Clear Form</button>
+
+		</form>
+		
+		
+		
+  	</main>
+    
+	<footer>
+		<aside>
+			The Mountain Spoke <br>
+			3950 Valley Commons Drive. <br>
+			Bozeman, MT 59718 <br>
+			(999)999-9999 <br>
+			contact@theurl.com <br>
+            <a href="ResourcePage.html">Resource Page</a>
+            <a href="myVideo.html">My Video Overview</a>
+        </aside>
+      
+		<p class="footer-bar">&copy;2018 All Rights Reserved | The Mountain Spoke | <span id="currentdate">Current Date Placeholder</span></p>
+   	</footer>
+
+	<script src="scripts/hamburger.js"></script>
+	<script src="scripts/currentdate.js"></script>
+    	
+</body>
+</html>
